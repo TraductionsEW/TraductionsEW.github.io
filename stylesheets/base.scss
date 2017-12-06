@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding-top: $space-small;
+  padding-right: $space-medium;
+  padding-left: $space-medium;
+  font-size: $font-size;
+  font-family: $font-family;
+  color: $color-text;
+  background-color: $color-background-1;
+  line-height: 1.7777;
+}
+
+.layout {
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %header;
+}
+
+h1 { font-size: 28px; }
+h2 { font-size: 24px; }
+h3 { font-size: 22px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}

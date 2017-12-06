@@ -1,3 +1,14 @@
 @import '../node_modules/normalize.css/normalize.css';
 
-body {}
+@import 'fonts.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'extends.scss';
+
+@import 'base.scss';
+@import 'form.scss';
+@import 'header.scss';
+@import 'footer.scss';
+
+@import 'block.scss';
+@import 'sidebar.scss';

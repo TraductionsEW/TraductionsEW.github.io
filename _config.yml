@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Traductions Emily Wilson
+name: Emily Wilson
 email: contact@traductionsemilywilson.com
 description: > # this means to ignore newlines until "baseurl:"
   French to English Translation services.

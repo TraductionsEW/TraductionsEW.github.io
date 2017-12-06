@@ -1,0 +1,50 @@
+::-webkit-input-placeholder { color: $color-input-placeholder; }
+::-moz-placeholder { color: $color-input-placeholder; }
+:-ms-input-placeholder { color: $color-input-placeholder; }
+:-moz-placeholder { color: $color-input-placeholder; }
+
+%input-base {
+  padding: 13px 15px 10px;
+  margin-bottom: 15px;
+  font-family: $font-family;
+  line-height: 1.6;
+  border: 1px solid $color-border;
+}
+
+.form-input {
+  @extend %input-base;
+  height: $input-height;
+  width: 100%;
+}
+
+.form-textarea {
+  @extend %input-base;
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  min-height: 180px;
+}
+
+.button {
+  @extend %font-smoothing;
+  height: $input-height;
+  padding: 13px 23px 10px;
+  background-color: $color-button;
+  color: $color-background-1;
+  border: 0;
+  border-radius: 0;
+}
+
+/***
+ * Positioning
+ */
+
+.form-field-textarea {
+  position: relative;
+
+  .button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}

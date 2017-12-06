@@ -1,0 +1,22 @@
+<header class="main-header">
+  <div class="logo">
+    <a href="/">
+      <img src="/assets/logo.png" alt="{{ site.title }}">
+      <h1>{{ site.name }}</h1>
+    </a>
+    <h2>Translator and Revisor — French to English</h2>
+  </div>
+
+  <nav class="main-navigation">
+    {% assign nav_items = 'Services|About|Contact' | split: '|' %}
+    <ul>
+      {% for item in nav_items %}
+        <li class="main-navigation-item {% if item == page.title or item == page.map %}active{% endif %}">
+          <a href="/{{ item | downcase }}">
+            {{ item }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

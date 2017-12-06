@@ -1,0 +1,86 @@
+.main-header {
+  @extend %layout;
+}
+
+.logo {
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    width: 80px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  h1 {
+    margin-top: $space-small;
+    margin-bottom: $space-small;
+    font-size: 16px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin-top: $space-small;
+    margin-bottom: $space-small;
+  }
+}
+
+.main-navigation {
+  @extend %header;
+  margin-top: $space-large;
+  margin-bottom: $space-large;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    font-size: 0;
+    text-align: center;
+  }
+
+  .main-navigation-item {
+    position: relative;
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 28px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      display: block;
+      font-size: $font-size;
+      opacity: 0.5;
+    }
+
+    &.active {
+      &::before {
+        opacity: 0.7;
+      }
+
+      a {
+        color: $color-header;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @for $i from 1 through 3 {
+    .main-navigation-item:nth-of-type(#{$i})::before {
+      content: "#{$i}";
+    }
+  }
+
+  a {
+    color: $color-text;
+    text-decoration: none;
+  }
+}

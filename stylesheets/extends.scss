@@ -1,0 +1,27 @@
+%clearfix::before,
+%clearfix::after {
+  content: " ";
+  display: table;
+}
+
+%clearfix::after {
+  clear: both;
+}
+
+%font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+%layout {
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+%header {
+  font-family: $font-family-header;
+  color: $color-header;
+  font-weight: 400;
+  line-height: 1.4375;
+}

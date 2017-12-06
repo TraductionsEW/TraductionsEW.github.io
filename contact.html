@@ -1,0 +1,46 @@
+---
+layout: site
+title: Contact
+---
+
+<div class="block">
+  <div class="block-column">
+    {% include sidebar.html %}
+  </div>
+
+  <div class="block-column">
+    <h4>Get in touch</h4>
+    <p>
+      Have a question about my services or looking for a quote? Get in touch here!
+    </p>
+
+    <form action="https://formspree.io/hello@cbmunro.com"
+          method="POST">
+        <label for="contact_email">
+          <input
+            class="form-input"
+            id="contact_email"
+            type="email"
+            name="_replyto"
+            placeholder="Your email"
+          >
+        </label>
+
+        <div class="form-field-textarea">
+          <label for="contact_message">
+            <textarea
+              class="form-textarea"
+              id="contact_message"
+              name="message"
+              placeholder="Write an introduction to the project..."
+            ></textarea>
+          </label>
+          <input
+            class="button"
+            type="submit"
+            value="Send"
+          >
+        </div>
+    </form>
+  </div>
+</div>

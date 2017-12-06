@@ -1,0 +1,34 @@
+<div class="sidebar-block">
+  <h5>Published Translations</h5>
+  <ul>
+    <li>
+      <a target="_blank" href="https://quebecreads.com/chairx/">Ici la chair est partout</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://qcfiction.com/?page_id=5298">I Never Talk About It</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://maisonneuve.org/post/2017/01/3/love-half-mast/">Love at Half Mast</a>
+    </li>
+  </ul>
+</div>
+
+<div class="sidebar-block">
+  <h5>Social</h5>
+  <ul>
+    <li>
+      <a href="//www.linkedin.com/in/{{ site.linkedin_username }}">LinkedIn</a>
+    </li>
+    <li>
+      <a href="//twitter.com/{{ site.twitter_username }}">Twitter</a>
+    </li>
+  </ul>
+</div>
+
+{% if include.portrait %}
+  <div class="sidebar-block">
+    <figure>
+      <img src="/assets/portrait.jpg">
+    </figure>
+  </div>
+{% endif %}
