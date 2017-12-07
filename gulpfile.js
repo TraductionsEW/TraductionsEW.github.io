@@ -24,7 +24,7 @@ gulp.task('scss', function () {
       cascade: false
     }))
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(gulp.dest('assets'));
+    .pipe(gulp.dest('assets/css'));
 });
 
 
