@@ -48,3 +48,20 @@
     bottom: 0;
   }
 }
+
+/***
+ * Uploadcare
+ */
+
+.uploadcare-widget-button-open {
+  @extend .button;
+  width: 100%;
+  margin-top: 1px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-button;
+  }
+}
