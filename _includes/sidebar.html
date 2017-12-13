@@ -1,5 +1,12 @@
+{% if page.layout == "fr" %}
+  {% assign lang_translations = "Traductions littéraires publiées" %}
+  {% assign lang_social = "Coordonnées" %}
+{% elsif page.layout == "en" %}
+  {% assign lang_translations = "Published Translations" %}
+{% endif %}
+
 <div class="sidebar-block">
-  <h5>Published Translations</h5>
+  <h5>{{ lang_translations }}</h5>
   <ul>
     <li>
       <a target="_blank" href="https://quebecreads.com/chairx/">Ici la chair est partout</a>

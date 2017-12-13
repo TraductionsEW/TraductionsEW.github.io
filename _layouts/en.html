@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+
+<body>
+  {% assign lang = "fr" %}
+  {% if page.layout == "fr" %}
+    {% assign lang = "en" %}
+  {% endif %}
+
+  <a class="lang-toggle" href="/{{ lang }}/{{ page.title | downcase }}">FR/EN</button>
+
+  {% include header.html %}
+  {{ content }}
+  {% include footer.html %}
+</body>
+</html>

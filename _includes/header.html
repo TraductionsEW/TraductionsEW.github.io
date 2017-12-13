@@ -1,6 +1,6 @@
 <header class="main-header">
   <div class="logo">
-    <a href="/">
+    <a href="/{{ page.layout }}">
       <img src="/assets/logo.png" alt="{{ site.title }}">
       <h1>{{ site.name }}</h1>
     </a>
@@ -9,11 +9,18 @@
 
   <nav class="main-navigation">
     {% assign nav_items = 'Services|About|Contact' | split: '|' %}
+
+    {% if page.layout == "fr" %}
+      {% assign lang_nav_items = 'Services|À Propos|Contact' | split: '|' %}
+    {% elsif page.layout == "en" %}
+      {% assign lang_nav_items = nav_items %}
+    {% endif %}
+
     <ul>
       {% for item in nav_items %}
-        <li class="main-navigation-item {% if item == page.title or item == page.map %}active{% endif %}">
-          <a href="/{{ item | downcase }}">
-            {{ item }}
+        <li class="main-navigation-item {% if item == page.title or page.map == item %}active{% endif %}">
+          <a href="/{{ page.layout }}/{{ item | downcase }}">
+            {{ lang_nav_items[forloop.index0] }}
           </a>
         </li>
       {% endfor %}
