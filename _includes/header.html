@@ -1,21 +1,23 @@
+{% assign nav_items = 'Services|About|Contact' | split: '|' %}
+
+{% if page.layout == "fr" %}
+  {% assign lang_subtitle = "Traductrice et réviseure — du français vers l'anglais" %}
+  {% assign lang_nav_items = 'Services|À propos|Contact' | split: '|' %}
+{% elsif page.layout == "en" %}
+  {% assign lang_subtitle = 'Translator and revisor — French to English' %}
+  {% assign lang_nav_items = nav_items %}
+{% endif %}
+
 <header class="main-header">
   <div class="logo">
     <a href="/{{ page.layout }}">
       <img src="/assets/logo.png" alt="{{ site.title }}">
       <h1>{{ site.name }}</h1>
     </a>
-    <h2>Translator and Revisor — French to English</h2>
+    <h2>{{ lang_subtitle }}</h2>
   </div>
 
   <nav class="main-navigation">
-    {% assign nav_items = 'Services|About|Contact' | split: '|' %}
-
-    {% if page.layout == "fr" %}
-      {% assign lang_nav_items = 'Services|À Propos|Contact' | split: '|' %}
-    {% elsif page.layout == "en" %}
-      {% assign lang_nav_items = nav_items %}
-    {% endif %}
-
     <ul>
       {% for item in nav_items %}
         <li class="main-navigation-item {% if item == page.title or page.map == item %}active{% endif %}">
